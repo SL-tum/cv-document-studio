@@ -1,0 +1,17 @@
+{
+  "name": "cv-document-studio",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @cv-document-studio/review-contracts && npm run build -w @document-tree/rdt && npm run build -w @cv-document-studio/api && npm run build -w @cv-document-studio/web",
+    "check": "npm run build -w @cv-document-studio/review-contracts && npm run build -w @document-tree/rdt && npm run check -w @cv-document-studio/api && npm run lint -w @cv-document-studio/web",
+    "test": "npm test -w @document-tree/rdt && npm test -w @cv-document-studio/api",
+    "dev:api": "npm run dev -w @cv-document-studio/api",
+    "dev:web": "npm run dev -w @cv-document-studio/web",
+    "audit:paths": "node scripts/audit-project.mjs"
+  }
+}

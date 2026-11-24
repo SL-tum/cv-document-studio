@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.env
+.env.local
+manual/
+outputs/
+logs/
+coverage/
+test-results/
+data/templates/
+data/candidates/
+*.log
+.DS_Store
+*.tmp
+
+# Environment variants and local credentials
+.env.*
+!.env.example
+.aws/
+.codex/
+*.pem
+*.key
+
+# Compiler caches and local reports
+*.tsbuildinfo
+.nyc_output/
+playwright-report/

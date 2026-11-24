@@ -1,0 +1,23 @@
+{
+  "name": "@cv-document-studio/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test --import tsx test/**/*.test.ts",
+    "dev": "env -u GEMINI_API_KEY node --env-file-if-exists=../../.env --watch dist/index.js",
+    "start": "env -u GEMINI_API_KEY node --env-file-if-exists=../../.env dist/index.js"
+  },
+  "dependencies": {
+    "@cv-document-studio/review-contracts": "0.1.0",
+    "@document-tree/rdt": "0.1.0",
+    "fflate": "^0.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  }
+}
